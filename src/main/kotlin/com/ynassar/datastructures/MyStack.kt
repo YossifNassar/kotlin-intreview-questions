@@ -2,7 +2,7 @@ package com.ynassar.datastructures
 
 class Node<T : Comparable<T>>(val data: T, var max: T = data, var next : Node<T>? = null)
 
-class MyStack<T : Comparable<T>>{
+class MyStack<T : Comparable<T>> {
     private var head: Node<T>? = null
 
     fun peek() = head?.data
@@ -19,4 +19,6 @@ class MyStack<T : Comparable<T>>{
     }
 
     fun max() = head?.max
+
+    fun isEmpty() = head == null
 }
